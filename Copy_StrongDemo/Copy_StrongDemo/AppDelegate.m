@@ -34,80 +34,92 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSString *str = @"haha";
+//    NSString *str = @"haha";
+//
+//    self.testStrongStr = str;
+//    self.testCopyStr = str;
+//
+//    NSLog(@"%p---%p---%p",str,_testStrongStr,_testCopyStr);
+//
+//
+//    NSMutableString *mutaStr = [[NSMutableString alloc] initWithString:@"mutaStr"];
+//
+//    self.testStrongStr = mutaStr;
+//    self.testCopyStr = [mutaStr mutableCopy];
+//
+//    [mutaStr appendString:@"--222"];
+//
+//
+//    NSLog(@"%p---%p---%p",mutaStr,_testStrongStr,_testCopyStr);
+//    NSLog(@"\n%@---%@---%@",mutaStr,_testStrongStr,_testCopyStr);
+//
+//    NSArray *arr = @[@1,@2];
+//    self.testArr = arr;
+//    self.testCopyArr = arr;
+//    NSLog(@"%p---%p---%p",arr,_testArr,_testCopyArr);
+//
+//    NSMutableArray *arr2 = [NSMutableArray arrayWithArray:@[@1,@2]];
+//    self.testArr = arr2;
+//    self.testCopyArr = arr2;
+//
+//    [arr2 addObject:@3];
+//
+//    NSLog(@"%p---%p---%p",arr2,_testArr,_testCopyArr);
+//    NSLog(@"%@---%@---%@",arr2,_testArr,_testCopyArr);
+//
+//
+//    NSArray *arr3 = @[@1,@2];
+//    self.testArr = [arr3 mutableCopy];
+//    self.testCopyArr = [arr3 mutableCopy];
+//    NSLog(@"%p---%p---%p",arr3,_testArr,_testCopyArr);
+//
+//
+//    NSDictionary *dict = @{@1:@2,@3:@4};
+//    self.testDic = dict;
+//    self.testCopyDic = [dict mutableCopy];
+//    NSLog(@"%p---%p---%p",dict,_testDic,_testCopyDic);
+//
+////    [self.testCopyDic setObject:@5 forKey:@4];
+//
+//
+//    NSArray *arr4 = @[@1,@2];
+//    self.testMutArr = [arr4 copy];
+//    self.testMutCopArr = [arr4 mutableCopy];
+//    NSLog(@"%p---%p---%p",arr4,_testMutArr,_testMutCopArr);
+//
+//    NSMutableArray *arr5 = [NSMutableArray arrayWithArray:@[@1]];
+//    self.testMutArr = [arr5 copy];
+//    self.testMutCopArr = [arr5 mutableCopy];
+//    NSLog(@"%p---%p---%p",arr5,_testMutArr,_testMutCopArr);
+//
+//    NSString *str6 = @"str";
+//    self.testMutStr = str6;
+//    self.testMutCopyStr = str6;
+//
+//    self.testMutStr = [str6 mutableCopy];
+//    self.testMutCopyStr = [str6 mutableCopy];
+//
+//    NSMutableString *muStr = [[NSMutableString alloc] initWithString:@"mutStr"];
+//    self.testMutStr = [muStr mutableCopy];
+//    self.testMutCopyStr = [muStr mutableCopy];
+//    NSLog(@"%p---%p---%p",muStr,_testMutStr,_testMutCopyStr);
+//
+//    [self.testMutStr appendString:@"1"];
+////    self.testMutCopyStr
+////    [self.testMutCopyStr appendString:@2];
+//
+//    NSString *tagPointerStr = [NSString stringWithFormat:@"1"];
     
-    self.testStrongStr = str;
-    self.testCopyStr = str;
+//    NSArray *arr = @[@1,@2];
+//    self.testArr = [arr mutableCopy];
+//    self.testCopyArr = [arr mutableCopy];
+//    NSLog(@"%p---%p---%p",arr,self.testArr,self.testCopyArr);
     
-    NSLog(@"%p---%p---%p",str,_testStrongStr,_testCopyStr);
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:@[@1,@2]];
     
+    self.testMutArr = [arr mutableCopy];
+    self.testMutCopArr = [arr mutableCopy];
     
-    NSMutableString *mutaStr = [[NSMutableString alloc] initWithString:@"mutaStr"];
-    
-    self.testStrongStr = mutaStr;
-    self.testCopyStr = [mutaStr mutableCopy];
-    
-    [mutaStr appendString:@"--222"];
-    
-    
-    NSLog(@"%p---%p---%p",mutaStr,_testStrongStr,_testCopyStr);
-    NSLog(@"\n%@---%@---%@",mutaStr,_testStrongStr,_testCopyStr);
-    
-    NSArray *arr = @[@1,@2];
-    self.testArr = arr;
-    self.testCopyArr = arr;
-    NSLog(@"%p---%p---%p",arr,_testArr,_testCopyArr);
-    
-    NSMutableArray *arr2 = [NSMutableArray arrayWithArray:@[@1,@2]];
-    self.testArr = arr2;
-    self.testCopyArr = arr2;
-    
-    [arr2 addObject:@3];
-    
-    NSLog(@"%p---%p---%p",arr2,_testArr,_testCopyArr);
-    NSLog(@"%@---%@---%@",arr2,_testArr,_testCopyArr);
-    
-    
-    NSArray *arr3 = @[@1,@2];
-    self.testArr = [arr3 mutableCopy];
-    self.testCopyArr = [arr3 mutableCopy];
-    NSLog(@"%p---%p---%p",arr3,_testArr,_testCopyArr);
-    
-    
-    NSDictionary *dict = @{@1:@2,@3:@4};
-    self.testDic = dict;
-    self.testCopyDic = [dict mutableCopy];
-    NSLog(@"%p---%p---%p",dict,_testDic,_testCopyDic);
-    
-//    [self.testCopyDic setObject:@5 forKey:@4];
-    
-    
-    NSArray *arr4 = @[@1,@2];
-    self.testMutArr = [arr4 copy];
-    self.testMutCopArr = [arr4 mutableCopy];
-    NSLog(@"%p---%p---%p",arr4,_testMutArr,_testMutCopArr);
-    
-    NSMutableArray *arr5 = [NSMutableArray arrayWithArray:@[@1]];
-    self.testMutArr = [arr5 copy];
-    self.testMutCopArr = [arr5 mutableCopy];
-    NSLog(@"%p---%p---%p",arr5,_testMutArr,_testMutCopArr);
-    
-    NSString *str6 = @"str";
-    self.testMutStr = str6;
-    self.testMutCopyStr = str6;
-    
-    self.testMutStr = [str6 mutableCopy];
-    self.testMutCopyStr = [str6 mutableCopy];
-    
-    NSMutableString *muStr = [[NSMutableString alloc] initWithString:@"mutStr"];
-    
-    NSLog(@"%p---%p---%p",str6,_testMutStr,_testMutCopyStr);
-    
-    [self.testMutStr appendString:@"1"];
-//    self.testMutCopyStr
-//    [self.testMutCopyStr appendString:@2];
-    
-    NSString *tagPointerStr = [NSString stringWithFormat:@"1"];
     
     return YES;
 }
